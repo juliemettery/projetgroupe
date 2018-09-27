@@ -1,0 +1,171 @@
+/*permet de placer l'aside en dessous de la galerie quand l'ecran se reduit*/
+.wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+  }
+  
+  .wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+  }
+    
+  @media all and (min-width: 600px) {
+    .aside { flex: 1 auto; }
+  }
+  
+  @media all and (min-width: 1025px) {
+    .main    { flex: 3 0px; }
+    .aside-1 { order: 1; } 
+    .main    { order: 2; }
+    .footer  { order: 3; }
+  }
+  /*------------------------*/
+  body {
+    margin:0px auto;
+    font-family: 'Pacifico', cursive;
+    padding:0px;
+    background-color: #3E2723;
+  }
+  /*Galerie*/
+  .btn:focus, .btn:active, button:focus, button:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  #image-gallery .modal-footer{
+    display: block;
+  }
+  
+  .thumb{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  /*---------------------*/
+  /*Navbar*/
+    nav ul {
+      margin: 0px;
+      padding: 0px;
+      list-style-type: none;
+      background-color: #333333;
+    }
+    nav li {
+      display: inline-block;
+      width:160px;
+      height:40px;
+      margin:0px;
+      padding: 0px;
+      border-right:1px solid white;
+      border-left: 1px solid white;
+      text-align: center;
+      line-height: 40px;
+      
+    }
+    nav li :hover{
+    color: #8B4513
+    }
+    nav li a{
+      display:inline-block;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    /*-----------*/
+   .aside{
+     margin-top: 16px;
+     border: solid 4px;
+     border-radius: 4px;
+     border-color: #8B4513;
+     color: rgb(255, 255, 255);
+     background-color: rgba(139, 69, 19, 0.521);
+   }
+    /*bordure des thumbnails*/
+   .img-thumbnail{
+     background:#8B4513 ;
+     border: 0 none;
+   }
+  /*-----------------*/
+   /* 
+Extra small devices (portrait phones, less than 544px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+h1,h2,h5 {font-size:1.5rem;} /*1rem = 16px*/
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+  h1,h2,h5,li {font-size:1.5rem;} /*1rem = 16px*/
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  h1,h2 {font-size:1.5rem;} /*1rem = 16px*/
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  h1,h2 {font-size:1.5rem;} /*1rem = 16px*/
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  h1,h2 {font-size:2rem;} /*1rem = 16px*/    
+}
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+ 
+/* Set width to make card deck cards 100% width */
+@media (min-width: 950px) and (max-width:1100px) { 
+  h1,h2 {font-size:1.5rem;} 
+}
+/*aside*/
+.theme{
+  list-style-type: none;
+  text-align: left;
+}
+
+a{
+  color: rgb(255, 255, 255);/*enlever bleu + nouvelle couleur*/
+  text-decoration: none;
+}
+
+a:hover{
+  color: #3E2723;
+}
+/*----------*/
+
+/*bouton lightbox galerie*/
+#show-next-image{
+  background-color:#3E2723;
+ }
+ 
+ #show-previous-image{
+   background-color: #3E2723;
+ }
+ /*---------------*/
+
+ /*div d'espacement*/
+ .spacer1{
+   height: 100px;
+ }
+
+ .spacer2{
+   height: 50px;
+ }
+
+ 
